@@ -1,0 +1,38 @@
+const theme = {
+    breakpoints: ['767px', '1279px', '1280px'],
+    colors: {
+      dark: '#1a1818',
+      softDark: '#181818',
+      blue: '#00b2a9',
+      blue2: '#D6F7F5',
+      white: '#ffff',
+      white2: '#c5c4c4',
+      white3: '#f7f8fa',
+      white4: '#f9f9f9',
+      trunge: '#ffba00',
+      orange2: '#F77E0B',
+      disabled: '#8CDEDA',
+      red: '#f01c62',
+      gray1: '#909090',
+      gray2: '#bbbbbb',
+      gray3: '#2C2C2C',
+      gray4: '#7b7b7b',
+      gray5: '#e8f0f8',
+      gray6: '#f2f2f2',
+      gray7: '#c4c4c4',
+      gray8: '#707070',
+      gray9: '#c6c6c6',
+      gray10: '#9b9b9b',
+      gray11: '#d3d3d3',
+      gray12: '#dedee0',
+      black: 'black',
+      black2: '#6e6d6d',
+      black3: '#383838',
+      black3: '#404041',
+      black4: '#22242A',
+      green: '#51dc8e',
+    },
+  };
+  
+  export default theme;
+  
