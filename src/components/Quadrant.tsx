@@ -8,13 +8,6 @@ interface Props {
     vision: number;
     ability: number;
     component: JSX.Element;
-    ref: Object;
-    offsets: {
-      diffX: number;
-      diffY: number;
-      dragging: boolean;
-      styles: { left: number };
-    };
   }>;
   setData(
     arg: Array<{
@@ -22,13 +15,6 @@ interface Props {
       vision: number;
       ability: number;
       component: JSX.Element;
-      ref: Object;
-      offsets: {
-        diffX: number;
-        diffY: number;
-        dragging: boolean;
-        styles: { left: number };
-      };
     }>
   ): void;
 }
@@ -41,30 +27,6 @@ interface AreaProps {
 }
 
 const Quadrant: FC<Props> = ({ data, setData, ...props }) => {
-  // const defineRefToData = (
-  //     r: {
-  //         offsetHeight: number,
-  //         offsetLeft: number,
-  //         offsetTop: number,
-  //         offsetWidth: number
-  //     },
-  //     key: number
-  // ) => {
-
-  //     let tmpData: { label: string, vision: number, ability: number, component: JSX.Element, ref: Object, offsets: Object }[] = [];
-
-  //     tmpData = data;
-
-  //     tmpData[key].ref = { r }
-  //     tmpData[key].offsets = {
-  //         offsetHeight: r.offsetHeight,
-  //         offsetLeft: r.offsetLeft,
-  //         offsetTop: r.offsetTop,
-  //         offsetWidth: r.offsetWidth
-  //     }
-
-  // }
-
   const [area, setArea] = useState<AreaProps>({
     width: 0,
     height: 0,
@@ -81,8 +43,6 @@ const Quadrant: FC<Props> = ({ data, setData, ...props }) => {
       window.innerHeight ||
       document.documentElement.clientHeight ||
       document.body.clientHeight;
-
-    console.log(width, height);
 
     calculateQuadrantAreaWidth(width, height);
   }, []);
@@ -106,30 +66,7 @@ const Quadrant: FC<Props> = ({ data, setData, ...props }) => {
       currentTarget: { getBoundingClientRect: Function };
     },
     label: string
-  ) => {
-    console.log({ data });
-    // setData(
-    //   [...data].map((object) => {
-    //     console.log({object})
-    //     if (object.label === data[index].label) {
-    //       return {
-    //         ...object,
-    //         offsets: {
-    //           diffX: e.screenX - e.currentTarget.getBoundingClientRect().left,
-    //           diffY: e.screenY - e.currentTarget.getBoundingClientRect().top,
-    //           dragging: true,
-    //           styles: { left: data[index].offsets.styles.left },
-    //         },
-    //       };
-    //     } else return object;
-    //   })
-    // );
-    // this.setState({
-    //     diffX: e.screenX - e.currentTarget.getBoundingClientRect().left,
-    //     diffY: e.screenY - e.currentTarget.getBoundingClientRect().top,
-    //     dragging: true
-    // });
-  };
+  ) => {};
 
   const _dragging = (
     e: {

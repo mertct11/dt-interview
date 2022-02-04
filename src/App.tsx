@@ -12,13 +12,6 @@ function App() {
       vision: number;
       ability: number;
       component: JSX.Element;
-      ref: Object;
-      offsets: {
-        diffX: number;
-        diffY: number;
-        dragging: boolean;
-        styles: { left: number };
-      };
     }>
   >([]);
 

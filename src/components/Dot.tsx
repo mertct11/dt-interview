@@ -6,13 +6,6 @@ interface Props {
     vision: number;
     ability: number;
     component: JSX.Element;
-    ref: Object;
-    offsets: {
-      diffX: number;
-      diffY: number;
-      dragging: boolean;
-      styles: { left: number };
-    };
   };
 
   key: number;
@@ -54,7 +47,6 @@ const Dot: FC<Props> = ({
       <Circle
         draggable={true}
         key={key}
-        style={{ left: item.offsets.styles.left }}
         ability={item?.ability}
         vision={item?.vision}
         area={area}
@@ -69,11 +61,7 @@ const Dot: FC<Props> = ({
         }}
       >
         {item?.component}
-        <div className="label">
-          {/* {item?.label} , {item?.offsets?.diffX} , {item?.offsets?.diffY} ,{" "}
-          {item?.offsets?.dragging ? "true" : "false"} */}
-          {item?.label}
-        </div>
+        <div className="label">{item?.label}</div>
       </Circle>
     </>
   );
